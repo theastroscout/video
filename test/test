@@ -1,0 +1,6 @@
+#!/bin/bash
+if g++ test.cpp -o test.app --std=c++20 -lavformat -lavcodec -lavfilter -lavdevice -lavutil -lswscale -lswresample -Werror -Wfatal-errors; then
+	./test.app
+else
+	echo "Compilation failed. Unable to execute ./test.app."
+fi
